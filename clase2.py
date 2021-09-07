@@ -87,5 +87,40 @@ elif (num == 0):
 else:
     print(f"El número {num} es negativo")
 
-# 
+# Ciclos
 
+# Ciclo for
+
+for valor in (range(11)):
+    print(valor)
+
+for valor in (range(1, 11)):
+    print(valor)
+
+for valor in (range(2, 11, 2)):
+    print(valor)
+
+# Lea n notas de un estudiante y calcule el promedio final
+
+n = int(input("Ingrese cantidad de notas a calcular: "))
+notas = []
+promedio = 0
+
+for i in range(n):
+    notas.append(float(input(f"Ingrese la {i+1} nota: ")))
+    promedio = notas[i] + promedio
+
+promedio = promedio/n
+print(f"El promedio de las notas es de: {promedio}")
+
+num = int(input("Digite número de notas cursadas: "))
+if(num >= 0):
+    acumulador = 0
+    for x in range(num):
+        nota = float(input(f"Digite la nota {x+1}: "))
+        acumulador = acumulador + nota
+        promedio = acumulador / num
+        promedio = round(promedio, 2)
+    print(f"El promedio final es: {promedio}")
+else:
+    print("El número no es válido")
