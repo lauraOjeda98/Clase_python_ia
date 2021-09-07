@@ -114,13 +114,13 @@ promedio = promedio/n
 print(f"El promedio de las notas es de: {promedio}")
 
 num = int(input("Digite número de notas cursadas: "))
-if(num >= 0):
+if(num > 0):
     acumulador = 0
     for x in range(num):
         nota = float(input(f"Digite la nota {x+1}: "))
         acumulador = acumulador + nota
-        promedio = acumulador / num
-        promedio = round(promedio, 2)
+    promedio = acumulador / num
+    promedio = round(promedio, 2)
     print(f"El promedio final es: {promedio}")
 else:
     print("El número no es válido")
