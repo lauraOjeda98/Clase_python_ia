@@ -29,3 +29,63 @@ print(True or True)
 print(True or False)
 print(False or True)
 print(False or False)
+
+# Negación
+
+print(not True)
+print(not False)
+
+# Más de dos condiciones al mismo tiempo
+
+print(True and False and True or False or True or True)
+print(True and (False and True) or False or (True or True))
+
+# Jerarquía de operaciones
+# 1. Parentesis y llaves
+# 2. Potencias y Raíces
+# 3. Multiplicación y División
+# 4. Sumas y Restas
+
+# Jerarquía de operaciones booleanas
+# 1. Paréntesis y llaves
+# 2. Tabla de verdad
+
+# Estructura if
+x = 1
+if(x > 0):
+    print("1")
+else:
+    print("2")
+    print("3")
+
+# Dada la edad de una persona indique si es mayor o menor de edad
+
+edad = int(input("Ingrese su edad: "))
+if (edad >= 18):
+    print("Usted es mayor de edad")
+else:
+    print("Usted es menor de edad")
+
+# Indique si un estudiante aprobó o reprobó una asignatura teniendo
+# en cuenta que aprueba con mínimo una cal de 3.0 hasta 5.0
+
+nota = float(input("Ingrese su nota: "))
+if (nota >= 3.0 and nota <= 5):
+    print("Usted aprobó la asignatura")
+elif(nota < 3.0 and nota > 0):
+    print("Usted reprobó esta asignatura")
+else:
+    print("La nota ingresada no es válida")
+
+# Dado un número n diga si es negativo, positivo o cero
+
+num = float(input("Ingrese el número: "))
+if (num > 0):
+    print(f"El número {num} es positivo")
+elif (num == 0):
+    print("El número es cero")
+else:
+    print(f"El número {num} es negativo")
+
+# 
+
