@@ -48,3 +48,28 @@ a = b[:]  # Forma más sencila
 b = a[0:3]
 b = a[:6]
 b = a[2:]
+c = [2, [3, 4], ['Hola', 'Mundo'], [2.3, [2, 5, 7], 2.6]]
+d = c[3][1[:2]]
+
+# Tuplas
+# Tipos de dato INMUTABLE y ordenado
+
+a = (1, 2, 3, 4)
+print(a[1])
+a = (2, 3, 4)
+b = (2, True, 'Hola', 3.4)
+c = (2, [3, 4], ['Hola', 'Mundo'], [2.3, [2.4, 2.5], 2.6])
+
+4 in a
+
+# Set
+# Mutable pero NO ordenado
+
+a = {1, 2, 3, 4}
+print(a[1])
+a = {2, 3, 4}
+b = {2, True, 'Hola', 3.4}
+# c = {2, [3, 4], ['Hola', 'Mundo'], [2.3, [2.4, 2.5], 2.6]}
+# No permite array en su interior
+
+4 in a
