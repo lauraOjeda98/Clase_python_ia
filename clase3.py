@@ -73,3 +73,26 @@ b = {2, True, 'Hola', 3.4}
 # No permite array en su interior
 
 4 in a
+
+# Diccionario
+# Muteable y No ordenado
+
+a = {'nombre': 'Roberto', 'apellido': 'Morales'}
+a = {1: 'Roberto', 2: 'Morales'}
+
+a['nombre']
+
+for i in a:
+    print(i)
+
+for i in a.values():
+    print(i)
+
+for i in a.keys():
+    print(i)
+
+for i in a.items():
+    print(i)
+
+for llave, valor in a.items():
+    print(f"Llave: {llave}, Valor: {valor}")
