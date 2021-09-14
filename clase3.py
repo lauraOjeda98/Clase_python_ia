@@ -9,7 +9,7 @@ Created on Mon Sep 13 19:24:18 2021
 
 # Listas o vectores
 # Tipos de dato mutable y ordenado
-
+a = []
 a = [2, 3, 4]
 b = [2, True, 'Hola', 3.4]
 c = [2, [3, 4], ['Hola', 'Mundo'], [2.3, [2.4, 2.5], 2.6]]
@@ -54,6 +54,7 @@ d = c[3][1[:2]]
 # Tuplas
 # Tipos de dato INMUTABLE y ordenado
 
+a = ()
 a = (1, 2, 3, 4)
 print(a[1])
 a = (2, 3, 4)
@@ -65,6 +66,7 @@ c = (2, [3, 4], ['Hola', 'Mundo'], [2.3, [2.4, 2.5], 2.6])
 # Set
 # Mutable pero NO ordenado
 
+a = set()
 a = {1, 2, 3, 4}
 print(a[1])
 a = {2, 3, 4}
@@ -77,6 +79,7 @@ b = {2, True, 'Hola', 3.4}
 # Diccionario
 # Muteable y No ordenado
 
+a = {}
 a = {'nombre': 'Roberto', 'apellido': 'Morales'}
 a = {1: 'Roberto', 2: 'Morales'}
 
@@ -96,3 +99,68 @@ for i in a.items():
 
 for llave, valor in a.items():
     print(f"Llave: {llave}, Valor: {valor}")
+
+# Funciones
+
+
+def nombre_funcion():
+    pass
+
+
+def saludar():
+    print('Hola mundo')
+
+
+def saludar(nombre):  # Python no permite sobrecarga de métodos
+    print(f"Hola {nombre}")
+
+# Parámetros opcionales
+
+
+def saludar(nombre='Mundo'):
+    print(f"Hola {nombre}")
+
+
+def saludar(nombre="", apellido=""):
+    print(f"Hola {nombre} {apellido}")
+
+
+# No se puede tener un parámetro obligatorio después de un parámetro opcional
+# def saludar(nombre, apellido="", segundo_apellido):
+#    print(f"Hola {nombre} {apellido}")
+
+# Parámetros ilimitados
+def saludar(*nombres):
+    for nombre in nombres:
+        print(f"Hola {nombre}")
+
+
+def saludar(*nombres, apellido=""):
+    for nombre in nombres:
+        print(f"Hola {nombre}")
+    print(f"Apellido {apellido}")
+
+
+def saludar(**nombres):
+    print(nombres)
+
+
+def resta(a, b):
+    print(a-b)
+
+
+def operaciones(a, b):
+    suma = a + b
+    resta = a - b
+    mult = a * b
+    div = a / b
+    return suma, resta, mult, div
+
+
+resultados = operaciones(a, b)
+
+suma, res, mult, div = operaciones(4, 5)
+suma, _, _, div = operaciones(4, 5)
+suma, div = operaciones(4, 5)
+
+# While(condición):
